@@ -1,0 +1,9 @@
+html{
+  background-color: #546A7B;
+}
+
+
+input[type=text] {
+  background-color: #3CBC8D;
+  color: white;
+}
