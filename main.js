@@ -10,14 +10,14 @@ function getRandomInt(max) {
 
 function generator(main,length) {
   sizeMain = main.length;
-  kakaha = '';
+ggg = '';
   for (let i = 0; i < length; i++) {
     x = getRandomInt(sizeMain);
-    kakaha += main[x];
+    ggg += main[x];
   }
   //return kakaha;
   //alert(kakaha)
-  document.getElementById('password').innerHTML = "Pass : "+kakaha;
+  document.getElementById('password').innerHTML = "Pass : "+ggg;
 }
 
 function generate(){
