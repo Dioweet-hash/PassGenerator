@@ -3,21 +3,19 @@ var listNumbers = '1234567890';
 var listChars = '!@#$%^&*()_+{}:<>?-=[];,./|';
 
 function getRandomInt(max) {
-  //return Math.floor(Math.random() * Math.floor(max));
-  gg = Math.floor(Math.random() * Math.floor(max));
-  return gg;
+  randNum = Math.floor(Math.random() * Math.floor(max));
+  return randNum;
 }
 
 function generator(main,length) {
   sizeMain = main.length;
-ggg = '';
+dummy = '';
   for (let i = 0; i < length; i++) {
     x = getRandomInt(sizeMain);
-    ggg += main[x];
+    dummy += main[x];
   }
-  //return kakaha;
-  //alert(kakaha)
-  document.getElementById('password').innerHTML = "Pass : "+ggg;
+
+  document.getElementById('password').innerHTML = "Pass : "+dummy;
 }
 
 function generate(){
@@ -31,9 +29,9 @@ function generate(){
   if (document.getElementById('numbers').checked) {main += listNumbers;};
   if (document.getElementById('chars').checked) {main += listChars;};
   fulled = document.getElementById('letters').checked + document.getElementById('numbers').checked + document.getElementById('chars').checked;
-  //alert(fulled)
+
   if (fulled == 0){
-    alert("Please choose min one");
+    alert("Please choose minimum one checkbox");
   }else{
     generator(main,length)
   }
